@@ -1,0 +1,85 @@
+{
+  "name": "aicodereviewer-jagdeep",
+  "displayName": "CodePulse AI Reviewer",
+  "description": "AI-powered code review for VS Code with Groq and Gemini support, bug detection, security checks, and code quality insights.",
+  "version": "0.0.5",
+  "publisher": "jagdeep",
+  "categories": ["Machine Learning", "Linters"],
+  "keywords": [
+    "ai",
+    "code review",
+    "review",
+    "bug detection",
+    "security",
+    "performance",
+    "code quality",
+    "vscode",
+    "groq",
+    "gemini",
+    "autofix",
+    "refactor"
+  ],
+  "galleryBanner": {
+    "color": "#0f172a",
+    "theme": "dark"
+  },
+
+  
+  
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aicodereviewer.reviewCode",
+        "title": "AI: Review My Code"
+      },
+      {
+        "command": "aicodereviewer.clearReview",
+        "title": "AI: Clear Review"
+      },
+      {
+        "command": "aicodereviewer.changeProvider",
+        "title": "AI: Change Provider"
+      },
+      {
+        "command": "aicodereviewer.showCurrentProvider",
+        "title": "AI: Show Current Provider"
+      },
+      {
+        "command": "aicodereviewer.clearSavedApiKeys",
+        "title": "AI: Clear Saved API Keys"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "aicodereviewer.reviewCode",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      },
+      {
+        "command": "aicodereviewer.clearReview",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  }
+}
