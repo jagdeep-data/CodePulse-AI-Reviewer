@@ -14,7 +14,7 @@ AI-powered code review extension for VS Code using **Groq & Gemini APIs**
 ---
 
 ## 📦 Install Extension
-👉 https://marketplace.visualstudio.com/items?itemName=jagdeep.CodePulse-AI-Reviewer
+👉 https://marketplace.visualstudio.com/items?itemName=Jagdeep.aicodereviewer-jagdeep
 
 ---
 
